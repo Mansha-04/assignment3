@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                var count=$("#selected p").length;
+                alert("no. of elements is "+count);
+            })
+        });
+
+    </script>
+    <title>q1</title>
+</head>
+<body>
+    <button id="b1">Click Me</button>
+    <div id="selected">
+        <p>Red</p>
+        <p>White</p>
+        <p>Green</p>
+        <p>Black</p>
+        <p>Blue</p>
+        <p>Orange</p>
+    </div>
+</body>
+</html>

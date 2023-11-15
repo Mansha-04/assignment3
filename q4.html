@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>q4</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                $("div").addClass("alert");
+            })
+            $("#b2").click(function(){
+                $("div").removeClass("alert");
+            })
+
+        })
+    </script>
+    <style>
+        div{display: none;}
+        .alert{text-align: center;
+               display: inline-block;
+               background-color: rgba(38, 36, 36,0.9);
+               color: white;}
+    </style>
+</head>
+<body>
+    <button id="b1">click</button>
+    <center>
+    <div>
+        <h4>This page says</h4>
+        <p>mai fake hu</p>
+        <button id="b2">OK</button>
+    </div>
+</center>
+</body>
+</html>
