@@ -15,21 +15,40 @@
         })
     </script>
     <style>
-        div{display: none;}
-        .alert{text-align: center;
+        div {
+              display: none;
+              box-shadow: 1px 1px 1px 1px black;
+              
+            }
+        .alert{
                display: inline-block;
-               background-color: rgba(38, 36, 36,0.9);
-               color: white;}
+               width: 450px;
+               position: absolute;
+               margin-top: -1px;
+               
+               background-color: white;
+               color:black;
+            }
+        section{margin-left: 33%;
+                position: absolute;
+                
+
+        }
+
     </style>
 </head>
 <body>
     <button id="b1">click</button>
-    <center>
+    
+    <section>
     <div>
-        <h4>This page says</h4>
-        <p>mai fake hu</p>
-        <button id="b2">OK</button>
+        <h4 style="margin-left: 10px;">This page says</h4>
+        <p style="margin-left: 10px;">pseudo alert</p>
+        
+        <button id="b2" style="margin-left:350px; background-color: blue; color: white; margin-bottom: 10px; width: 65px; height: 40px;" >OK</button>
+        
     </div>
-</center>
+    </section>
+    
 </body>
 </html>
