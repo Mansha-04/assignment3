@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            var a=$("#you").val();
+            var b=$("#comp").find(":selected").val();
+            $("#b1").click(function(){
+                if(a==='Rock'){
+                    if(b==='Rock'){
+                        $("p").html("tie");
+                    }
+                    if(b==='Paper'){
+                        $("p").html("comp wins");
+                    }
+                    if(b==='Scissors'){
+                        $("p").html("you win");
+                    }
+                }
+                if(a=='Paper'){
+                    if(b==='Paper'){
+                        $("p").html("tie");
+                    }
+                    if(b==='Scissors'){
+                        $("p").html("comp wins");
+                    }
+                    if(b==='Rock'){
+                        $("p").html("you win");
+                    }
+                }
+                if(a==='Scissors'){
+                    if(b=='Scissors'){
+                        $("p").html("tie");
+                    }
+                    if(b==='Rock'){
+                        $("p").html("comp wins");
+                    }
+                    if(b==='Paper'){
+                        $("p").html("you win");
+                    }
+                }
+            })
+        })
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+        <label for="u">Your choice:</label>
+        <select id="you" name="choose">
+            <option></option>
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="sci">Scissors</option>
+
+        </select><br><br>
+        <label for="com">Computer</label>
+        <input id="comp" type="text">
+        <button id="b1">GO</button>
+        <h1>Result</h1>
+        <p>ppp</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        var b=document.input["#row"].value;
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                var a="<tr><td>"+b+"</td></tr>";
+                var tab=$("table");
+                tab.append(a);
+            });
+        });
+    </script>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Colour</th>
+           
+        </tr>
+        
+    </table> 
+    <button id="b1">add row</button>
+    <button id="b2">change heading color</button><br>
+    <label for="row input">enter row</label>
+    <input id="row" type="text" placeholder="enter row value"><br>
+    <input type="text" placeholder="enter id to remove">
+    <button id="b3">ok</button>
+</body>
+</html>

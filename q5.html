@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                $("#box1").slideDown('fast');
+            });
+            $("#b2").click(function(){
+                $("div").animate({
+                    width: '100px',
+                    height: '100px',
+                    right: '500px'
+                    
+                });
+            });
+            $("#b3").click(function(){
+                $("#box2").fadeIn();
+            });
+            $("#b4").click(function(){
+                $("img").show('3000');
+            });
+            $("#b5").click(function(){
+                $("img").hide('3000');
+            });
+            $("#img1").mouseenter(function(){
+                alert("your cursor touched the image");
+            });
+            $("#img2").mouseleave(function(){
+                alert("your cursor left the image");
+            });
+            $("#b6").click(function(){
+                alert($("a").attr("href"));
+            });
+            $("#b7").dblclick(function(){
+                alert($("h1").html());
+
+            })
+        });
+    </script>
+    <style>
+        img{display: none;}
+        #box1, #box2{
+            display: none;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div style="background-color: orchid;height: 50px; width: 50px;"></div><br>
+    <div id="box1" style=" background-color: orangered;height: 50px; width: 50px;"></div><br>
+    <div id="box2" style=" background-color: olivedrab;height: 50px; width: 50px;"></div><br>
+    <button id="b1">slide down</button>
+    <button id="b2">animate</button>
+    <button id="b3">fade In</button>
+    <button id="b4">show img</button>
+    <button id="b5">hide img</button><br><br>
+    <img id="img1" src="https://i.pinimg.com/736x/1e/7e/66/1e7e66ed427ec7475a0c5b5116de2094.jpg" width="400" height="400">
+    <img id="img2" src="https://i.pinimg.com/736x/c4/1a/9f/c41a9facb333e3d6c451d6367c61fc89.jpg" width="400" height="400">
+    
+    <a href="https://www.google.com/">Google</a><br>
+    <button id="b6">attr</button>
+    <button id="b7">return html value</button>
+    <h1>ht<sup>m</sup>l</h1>
+    
+</body>
+</html>

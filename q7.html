@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                if($("input:text").is(":empty")){
+                    alert("empty");
+                }    
+                else{
+                    alert("ok");
+                }             
+           });   
+        });
+    </script>
+    <style>
+        div{text-align: center;}
+        form{background-color: blanchedalmond;}
+        h1:hover{color: gray;}
+        label:hover{border: 1px solid black;}
+        input[type=text]:hover{border: 1px solid blue;}
+        input[type=email]:hover{border: 1px solid blue;}
+        input[type=submit]:hover{
+            background-color: orange;
+        }
+        .error{border: 1px solid red;}
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+      
+      <form>
+        <h1>Form</h1>
+        <label for="fname">First name:</label>
+        <input id="fname" type="text" placeholder="enter first name"><br><br>
+        <label for="lname">Last name:</label>
+        <input id="lname" type="text" placeholder="enter last name"><br><br>
+        <label for="email">Email:</label>
+        <input id="email" type="email" placeholder="enter email"><br><br>
+        <label for="section">Section:</label>
+        <input id="sec" type="text" placeholder="enter section"><br><br>
+        <input id="b1" type="submit" value="Submit">
+      </form>
+      
+    </div>
+</body>
+</html>
