@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            var a=Math.floor((Math.random() * 3) + 1);
+            function refresh(){
+                a=Math.floor((Math.random() * 3) + 1);
+            }
+            // rock=1 paper=2 scissor=3 compchoice=a
+            $("#b1").click(function(){
+                if(a==1){
+                    $("#res").after('Tie<br>');
+                }
+                if(a==2){
+                    $("#res").after('Comp chose paper you lose<br>');
+                }
+                if(a==3){
+                    $("#res").after('Comp chose scissors you win<br>');
+                }
+            });
+            $("#b2").click(function(){
+                if(a==2){
+                    $("#res").after('Tie<br>');
+                }
+                if(a==3){
+                    $("#res").after('Comp chose scissors you lose<br>');
+                }
+                if(a==1){
+                    $("#res").after('Comp chose rock you win<br>');
+                }
+            });
+            $("#b3").click(function(){
+                if(a==3){
+                    $("#res").after('Tie<br>');
+                }
+                if(a==1){
+                    $("#res").after('Comp chose rock you lose<br>');
+                }
+                if(a==2){
+                    $("#res").after('Comp chose paper you win<br>');
+                }
+            });
+            
+            
+            $("#b4").click(function(){
+                 refresh();
+            });
+        });
+    </script>
+    <style>
+        .d{display: inline-block;}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <label for="u">Choose One:</label>
+    <button id="b1">Rock</button>
+    <button id="b2">Paper</button>
+    <button id="b3">Scissors</button><br><br>
+    <button id="b4">Proceed to Next Round</button><br>
+    <div class="d">
+        <h1 id="res">Result</h1>
+
+    </div>
+    <div class="d">
+        <h1>Score</h1>
+    </div>
+</body>
+</html>
